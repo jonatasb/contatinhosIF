@@ -3,11 +3,11 @@ class ContatoController {
 		this.model = model;
 	}
 
-	createContato (nome, telefone, status) {
-		if (nome == '' || telefone == '' || status == null) {
+	createContato (nome, telefone, /*status*/) {
+		if (nome == '' || telefone == '' /* || status == null*/) {
 			return false;
 		}
-		let contato = new Contato(nome, telefone, status);
+		let contato = new Contato(nome, telefone, /*status*/);
 		this.model.create(contato);
 		return true;
 	}
