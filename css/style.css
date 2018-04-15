@@ -1,0 +1,82 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+html,
+body{
+	height: 100vh;
+}
+
+:root{
+	--colorButton: rgba(230, 230, 230, 0.8);
+	--marginBottomDiv: 2rem;
+	--marginBottomInput: 1rem;
+	--marginBottomContato: 0.5rem;
+	--paddingInput: 0.25rem;
+	--backgroundDiv: rgba(0, 0, 0,  0.2);
+}
+
+body{
+	width: 680px;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background: #85A3B2;
+}
+
+h1{
+	margin-bottom: var(--marginBottomDiv);
+}
+
+#adicionar{
+	width: 100%;
+	height: 15rem;
+	display: flex;
+	margin-bottom: var(--marginBottomDiv);
+	background: var(--backgroundDiv);
+	align-items: center;
+	justify-content: center;
+}
+
+#formularioAdd{
+	width: 80%;
+	display: flex;
+	flex-direction: column;
+}
+
+#formularioAdd input{
+	margin-bottom: var(--marginBottomInput);
+}
+
+input[type="text"] {
+	padding: var(--paddingInput);
+	border: none;
+}
+
+button{
+	padding: var(--paddingInput);
+	border: none;
+}
+
+#contatosList{
+	width: 100%;
+	
+}
+
+.contatosListItemContainer {
+	width: 100%;
+	height: 3rem;
+	padding: var(--paddingInput);
+	display: flex;
+	align-items: center;
+	background: var(--backgroundDiv);
+	margin-bottom: var(--marginBottomContato);
+}
+
+.contatosListItem {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+}

@@ -1,5 +1,5 @@
 class Contato {
-	constructor (nome, telefone, status) {
+	constructor (nome, telefone /*, status*/) {
 		this.nome = nome;
 		this.telefone = telefone;
 //		this.status = status;

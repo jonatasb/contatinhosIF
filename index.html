@@ -6,26 +6,30 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
-	<header>
-		<h1>C0nt4t1nh05 m1l gr4u</h1>
-		<button>Adicionar novo contato</button>
-	</header>
+	<h1>C0nt4t1nh05 m1l gr4u</h1>
 	<div id="adicionar">
-		<form>
+		<form id="formularioAdd">
 			<label for="#nome">Nome</label>
 			<input type="text" id="nome" placeholder="Insira o nome do crush aqui">
 			<label for="#telefone">Telefone</label>
 			<input type="text" id="telefone" placeholder="Insira o telefone do crush aqui">
-			<label for=".status">Já fiquei?</label>
-			<input type="radio" class="statusSim" value="sim"> Sim
-			<input type="radio" class="status" value="nao"> Não
+<!--			<label for=".status">Já fiquei?</label>
+			<div id="radioButton">
+				<input type="radio" name="status" class="status" value="sim"> Sim
+				<input type="radio" name="status" class="status" value="nao"> Não
+			</div>
+-->
 			<button type="button" id="contatobutton"> Salvar Contato</button>
 		</form>
 	</div>
-	<div id="contatos">
+	<div id="contatosList">
 		<p>Você não possui nenhum contato</p>
 	</div>
 
+	<script type="text/javascript" src="model/contato.js"></script>
+	<script type="text/javascript" src="model/contatoList.js"></script>
+	<script type="text/javascript" src="controller/contatoController.js"></script>
+	<script type="text/javascript" src="view/contatoView.js"></script>
 	<script type="text/javascript" src="app.js"></script>
 </body>
 </html>

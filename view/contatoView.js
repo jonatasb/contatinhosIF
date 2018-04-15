@@ -4,7 +4,7 @@ class ContatoView {
 		this.contatoNome = document.querySelector('#nome');
 		this.contatoTelefone = document.querySelector('#telefone');
 //		this.contatoStatus = document.querySelectorAll('.status');
-		this.contatosList = document.querySelector('#contatosList')
+		this.contatosList = document.querySelector('#contatosList');
 		this.model = model;
 		this.controller = controller;
 		this.addButton.onclick = this.createContato.bind(this);
@@ -13,7 +13,7 @@ class ContatoView {
 	createContato () {
 		let nome = this.contatoNome.value;
 		let telefone = this.contatoTelefone.value;
-		if (this.controller.createContato(nome, telefone,/* this.contatoStatus*/) == false) {
+		if (this.controller.createContato(nome, telefone /*, this.contatoStatus*/) == false) {
 			alert('Alguma informação está em falta');
 		}
 		this.show();
@@ -28,7 +28,8 @@ class ContatoView {
 
 	show () {
 		this.contatosList.innerHTML = '';
-		this.model.data.forEach(function(contato){
+		for (var i = 0; i < this.model.data.length; i ++) {
+			let contato = this.model.data[i];
 			this.contatosList.innerHTML += '<div class="contatosListItemContainer">'+
 					'<div class="contatosListItem">'+
 					'	<p> Nome: '+contato.nome+'</p>'+
@@ -39,6 +40,6 @@ class ContatoView {
 					'	<button type="button" data-id="'+contato.code+'" name="removeButton">Remover contato</button>'+
 					'</div>'+
 				'</div>'
-		});
+		}
 	}
 }
