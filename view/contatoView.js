@@ -3,7 +3,6 @@ class ContatoView {
 		this.addButton = document.querySelector('#contatobutton');
 		this.contatoNome = document.querySelector('#nome');
 		this.contatoTelefone = document.querySelector('#telefone');
-//		this.contatoStatus = document.querySelectorAll('.status');
 		this.contatosList = document.querySelector('#contatosList');
 		this.model = model;
 		this.controller = controller;
@@ -13,7 +12,7 @@ class ContatoView {
 	createContato () {
 		let nome = this.contatoNome.value;
 		let telefone = this.contatoTelefone.value;
-		if (this.controller.createContato(nome, telefone /*, this.contatoStatus*/) == false) {
+		if (this.controller.createContato(nome, telefone) == false) {
 			alert('Alguma informação está em falta');
 		}
 		this.show();
@@ -34,10 +33,9 @@ class ContatoView {
 					'<div class="contatosListItem">'+
 					'	<p> Nome: '+contato.nome+'</p>'+
 					'	<p>Telefone: '+contato.telefone+'</p>'+
-//					'	<p>Status: '+contato.Status+'</p>'+
 					'</div>'+
 					'<div class="contatoAction">'+
-					'	<button type="button" data-id="'+contato.code+'" name="removeButton">Remover contato</button>'+
+					'	<button type="button" data-id="'+contato.code+'" name="removeButton" onclick="view.removeContato('+contato.code+')">Remover contato</button>'+
 					'</div>'+
 				'</div>'
 		}

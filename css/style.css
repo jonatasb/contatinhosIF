@@ -58,11 +58,11 @@ input[type="text"] {
 button{
 	padding: var(--paddingInput);
 	border: none;
+	height: 2.3rem;
 }
 
 #contatosList{
 	width: 100%;
-	
 }
 
 .contatosListItemContainer {

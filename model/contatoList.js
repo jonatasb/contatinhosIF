@@ -8,11 +8,19 @@ class ContatoList {
 		this.data.push(contato);
 	}
 
-	retrive (code) {
+	retrieve (code) {
 		return this.data.find((contato) => {
 			return contato.code == code;
 		});
 	}
 
-	remove (code) {}
+	remove (code) {
+		this.data.splice(code, 1);
+		let changed = this.data;
+		this.data = [];
+		for (var i = 0; i < changed.length; i++) {
+			this.create(changed[i]);
+		}
+		return true;
+	}
 }
